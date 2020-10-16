@@ -1,0 +1,16 @@
+USE toko_online;
+CREATE TABLE ramaen_ratings (Review INT (11), 
+			    Brand VARCHAR(30), 
+			    variety VARCHAR(50), 
+			    Style ENUM('Cup','Pack','Tray','Bowl','Box','Can','Bar'), 
+			    Country VARCHAR(30), 
+			    stars FLOAT, 
+			    Top_Ten VARCHAR(20));
+
+DESCRIBE ramen_ratings;
+
+SELECT * FROM ramen_ratings WHERE stars > 4;
+
+SELECT * FROM ramen_ratings WHERE Country=LCASE('Japan');
+
+SELECT Review, Brand, UCASE(Variety), Style, Country, Stars, Top_Ten FROM ramen_ratings;
